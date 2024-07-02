@@ -7,7 +7,7 @@ export const checkUser = async (req, res, next) => {
     const { userId } = req.params;
     const {UserId} = req.body
     try {
-        const data = await userModel.findByPk(id | UserId | userId);
+        const data = await userModel.findByPk(id || UserId || userId);
         if (!data) {
             res.status(400).json({ error: "Cant't find user with this id" })
         } else {
@@ -39,7 +39,7 @@ export const checkPost = async (req, res, next) => {
     const { postId } = req.params;
     const {PostId} = req.body
     try {
-        const data = await postModel.findByPk(id | PostId | req.commentPost | postId);
+        const data = await postModel.findByPk(id || PostId || req.commentPost || postId);
         if (!data) {
             res.status(400).json({ error: "Cant't find post with this id" })
         } else {

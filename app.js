@@ -16,15 +16,15 @@ app.use('/user', userRouter);
 app.use('/post', postRouter);
 app.use('/comment', commentRouter);
 
-// handle 404 page
 app.get('/', (req, res) => {
-    res.status(200).json({errormsg: 'Hello to our project'});
+    res.status(200).json({msg: 'Hello to our project'});
 })
 
+// handle 404 page
 app.get('*', (req, res) => {
     res.status(404).json({error: '404 page not found'});
 })
 
-app.listen(3000, () => {
-    console.info(`Server listen on port 3000`);
+app.listen(process.env.port || 3000, () => {
+    console.info(`Server listen on port ${process.env.port || 3000}`);
 })
