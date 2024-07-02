@@ -1,4 +1,5 @@
 import express from "express"
+import cors from "cors"
 import { testConnection } from "./database/dbConnection.js";
 import userRouter from "./modules/users/user.routes.js";
 import postRouter from "./modules/posts/post.routes.js";
@@ -7,6 +8,7 @@ import commentRouter from "./modules/comments/comment.routes.js";
 // create server
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 // text db connection
 testConnection();
