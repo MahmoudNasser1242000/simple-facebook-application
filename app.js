@@ -8,6 +8,10 @@ import commentRouter from "./modules/comments/comment.routes.js";
 const app = express();
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.status(200).json({msg: 'Hello to our project'});
+})
+
 // text db connection
 testConnection();
 
@@ -16,9 +20,6 @@ app.use('/user', userRouter);
 app.use('/post', postRouter);
 app.use('/comment', commentRouter);
 
-app.get('/', (req, res) => {
-    res.status(200).json({msg: 'Hello to our project'});
-})
 
 // handle 404 page
 app.get('*', (req, res) => {
