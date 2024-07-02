@@ -21,6 +21,6 @@ app.get('*', (req, res) => {
     res.status(404).json({error: '404 page not found'});
 })
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
     console.info(`Server listen on port 3000`);
 })
