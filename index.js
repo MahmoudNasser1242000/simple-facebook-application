@@ -12,7 +12,7 @@ app.use(express.json());
 const port = process.env.PORT || 3000
 
 // text db connection
-// testConnection();
+testConnection();
 
 //Routes
 app.use('/user', userRouter);
