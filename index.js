@@ -28,4 +28,6 @@ app.use('*', (req, res) => {
     res.status(404).json({error: '404 page not found'});
 })
 
-app.listen(port)
+app.listen(port, () => {
+    console.info(`Server listen on port ${port}`);
+})
