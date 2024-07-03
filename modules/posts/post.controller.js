@@ -6,7 +6,7 @@ export const getAllPosts = async (req, res) => {
         const data = await postModel.findAndCountAll();
         res.status(200).json({data: {count: data.count, posts: data.rows}})
     } catch (error) {
-        res.status(400).json({ error })
+        //res.status(400).json({ error })
     }
 }
 
@@ -20,7 +20,7 @@ export const addPost = async (req, res) => {
         });
         res.status(201).json({msg: "Post created successfully", data})
     } catch (error) {
-        res.status(400).json({ error })
+        //res.status(400).json({ error })
     }
 }
 
@@ -34,7 +34,7 @@ export const deletePost = async (req, res) => {
         });
         res.status(201).json({msg: "Post deleted successfully", data})
     } catch (error) {
-        res.status(400).json({ error })
+        //res.status(400).json({ error })
     }
 }
 
@@ -51,7 +51,7 @@ export const updatePost = async (req, res) => {
         });
         res.status(201).json({msg: "Post updated successfully", data})
     } catch (error) {
-        res.status(400).json({ error })
+        //res.status(400).json({ error })
     }
 }
 
@@ -70,6 +70,6 @@ export const getSpecificPost = async (req, res) => {
             res.status(400).json({msg: "Wrong post id"})
         }
     } catch (error) {
-        res.status(400).json({ error })
+        //res.status(400).json({ error })
     }
 }
