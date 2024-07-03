@@ -14,7 +14,7 @@ export const checkUser = async (req, res, next) => {
             next()
         }
     } catch (error) {
-        //res.status(400).json({ error })
+        res.status(400).json({ error })
     }
 }
 
@@ -30,7 +30,7 @@ export const checkComment = async (req, res, next) => {
             next()
         }
     } catch (error) {
-        //res.status(400).json({ error })
+        res.status(400).json({ error })
     }
 }
 
@@ -47,7 +47,7 @@ export const checkPost = async (req, res, next) => {
             next()
         }
     } catch (error) {
-        //res.status(400).json({ error })
+        res.status(400).json({ error })
     }
 }
 
