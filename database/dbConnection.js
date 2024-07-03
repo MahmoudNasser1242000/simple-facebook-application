@@ -6,10 +6,9 @@ dotenv.config();
 export const sequelize = new Sequelize("mysql://umcndnbwwie1nepy:x1xKCJJNNJh4BqjTBYqr@b0ysgn9epjp7pigurxsy-mysql.services.clever-cloud.com:3306/b0ysgn9epjp7pigurxsy");
 
 export const testConnection = async () => {
-    try {
-        await sequelize.sync({alert: false, force: false});
+    return await sequelize.sync({alert: false, force: false}).then(() => { 
         console.log('Connection has been established successfully.');
-    } catch (error) {
+    }).catch(() => {
         console.error('Unable to connect to the database:', error);
-    }
+    });
 }
