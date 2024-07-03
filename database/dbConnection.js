@@ -1,6 +1,6 @@
 import { Sequelize } from 'sequelize';
-import dotenv from 'dotenv';
-dotenv.config();
+// import dotenv from 'dotenv';
+// dotenv.config();
 
 
 export const sequelize = new Sequelize("mysql://umcndnbwwie1nepy:x1xKCJJNNJh4BqjTBYqr@b0ysgn9epjp7pigurxsy-mysql.services.clever-cloud.com:3306/b0ysgn9epjp7pigurxsy");

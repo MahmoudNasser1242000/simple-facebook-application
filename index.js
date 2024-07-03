@@ -9,7 +9,7 @@ import commentRouter from "./modules/comments/comment.routes.js";
 const app = express();
 app.use(cors());
 app.use(express.json());
-const port = process.env.port || 3000
+const port = process.env.PORT || 3000
 
 // text db connection
 testConnection();
