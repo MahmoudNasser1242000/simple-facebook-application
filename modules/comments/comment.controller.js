@@ -5,7 +5,7 @@ export const getAllComments = async (req, res) => {
         const data = await commentModel.findAndCountAll();
         res.status(200).json({ data: { count: data.count, comments: data.rows } })
     } catch (error) {
-        //res.status(400).json({ error })
+        res.status(400).json({ error })
     }
 }
 
@@ -19,7 +19,7 @@ export const addComment = async (req, res) => {
         });
         res.status(201).json({ msg: "Comment created successfully", data })
     } catch (error) {
-        //res.status(400).json({ error })
+        res.status(400).json({ error })
     }
 }
 
@@ -33,7 +33,7 @@ export const deleteComment = async (req, res) => {
         });
         res.status(201).json({ msg: "Comment deleted successfully", data })
     } catch (error) {
-        //res.status(400).json({ error })
+        res.status(400).json({ error })
     }
 }
 
@@ -50,6 +50,6 @@ export const updateComment = async (req, res) => {
             });
         res.status(201).json({ msg: "Comment updated successfully", data })
     } catch (error) {
-        //res.status(400).json({ error })
+        res.status(400).json({ error })
     }
 }

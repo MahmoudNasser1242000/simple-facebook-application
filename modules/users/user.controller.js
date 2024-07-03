@@ -21,7 +21,7 @@ export const signup = async (req, res) => {
             res.status(400).json({msg: "User allready exists"})
         }
     } catch (error) {
-        //res.status(400).json({msg: "Can't resgister", error})
+        res.status(400).json({msg: "Can't resgister", error})
     }
 }
 
@@ -43,7 +43,7 @@ export const signin = async (req, res) => {
             res.status(400).json({msg: "Cant't find user with this email"})
         }
     } catch (error) {
-        //res.status(400).json({msg: "Can't signin", error})
+        res.status(400).json({msg: "Can't signin", error})
     }
 }
 
@@ -58,7 +58,7 @@ export const logout = async (req, res) => {
 
         res.status(202).json({msg: "Logout successfully", data})
     } catch (error) {
-        //res.status(400).json({msg: "Can't logout", error})
+        res.status(400).json({msg: "Can't logout", error})
     }
 }
 
@@ -87,6 +87,6 @@ export const getSpecificUserWithSpecificPost = async (req, res) => {
             res.status(400).json({ msg: "post is not belong to this user" })
         }
     } catch (error) {
-        //res.status(400).json({ error })
+        res.status(400).json({ error })
     }
 }
