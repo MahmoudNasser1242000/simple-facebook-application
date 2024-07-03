@@ -32,7 +32,7 @@ export const deletePost = async (req, res) => {
                 id,
             }
         });
-        res.status(201).json({msg: "Post deleted successfully", data})
+        res.status(202).json({msg: "Post deleted successfully", data})
     } catch (error) {
         res.status(400).json({ error })
     }
@@ -49,7 +49,7 @@ export const updatePost = async (req, res) => {
                 id,
             }
         });
-        res.status(201).json({msg: "Post updated successfully", data})
+        res.status(202).json({msg: "Post updated successfully", data})
     } catch (error) {
         res.status(400).json({ error })
     }
@@ -65,7 +65,7 @@ export const getSpecificPost = async (req, res) => {
         });
 
         if (data) {
-            res.status(201).json({data})
+            res.status(200).json({data})
         } else {
             res.status(400).json({msg: "Wrong post id"})
         }

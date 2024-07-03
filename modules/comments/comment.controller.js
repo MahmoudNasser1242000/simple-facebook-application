@@ -31,7 +31,7 @@ export const deleteComment = async (req, res) => {
                 id,
             }
         });
-        res.status(201).json({ msg: "Comment deleted successfully", data })
+        res.status(202).json({ msg: "Comment deleted successfully", data })
     } catch (error) {
         res.status(400).json({ error })
     }
@@ -48,7 +48,7 @@ export const updateComment = async (req, res) => {
                     id,
                 }
             });
-        res.status(201).json({ msg: "Comment updated successfully", data })
+        res.status(202).json({ msg: "Comment updated successfully", data })
     } catch (error) {
         res.status(400).json({ error })
     }
