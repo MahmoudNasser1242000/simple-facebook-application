@@ -9,6 +9,7 @@ import commentRouter from "./modules/comments/comment.routes.js";
 const app = express();
 app.use(express.json());
 app.use(cors());
+const port = process.env.port || 3000
 
 // text db connection
 testConnection();
@@ -27,6 +28,6 @@ app.use('*', (req, res) => {
     res.status(404).json({error: '404 page not found'});
 })
 
-app.listen(process.env.port || 3000, () => {
-    console.info(`Server listen on port ${process.env.port || 3000}`);
+app.listen(port, () => {
+    console.info(`Server listen on port ${port}`);
 })
