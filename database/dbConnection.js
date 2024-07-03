@@ -8,7 +8,7 @@ export const sequelize = new Sequelize("mysql://umcndnbwwie1nepy:x1xKCJJNNJh4Bqj
 export const testConnection = async () => {
     return await sequelize.sync({alert: false, force: false}).then(() => { 
         console.log('Connection has been established successfully.');
-    }).catch(() => {
+    }).catch((error) => {
         console.error('Unable to connect to the database:', error);
     });
 }
