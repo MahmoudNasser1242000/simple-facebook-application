@@ -6,8 +6,8 @@ import postRouter from "./modules/posts/post.routes.js";
 import commentRouter from "./modules/comments/comment.routes.js";
 
 // create server
-app.use(cors());
 const app = express();
+app.use(cors());
 app.use(express.json());
 const port = process.env.port || 3000
 
